@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script src="../bundle.js"></script>
+    <style>
+      body {
+        background: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <fin-search-box></fin-search-box>
+    <script>
+      let ele = document.querySelector('fin-search-box');
+      ele.browse = {
+        foo : 'Foo',
+        bar : 'Bar',
+        baz : 'Baz'
+      }
+    </script>
+  </body>
+</html>

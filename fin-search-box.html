@@ -1,0 +1,46 @@
+<style>
+  :host {
+    display: block;
+  }
+  div {
+    display: flex;
+    align-items: center;
+  }
+  input {
+    flex: 1;
+    padding: 10px;
+    background: var(--fin-search-box-background, white);
+    border: none;
+    height: var(--fin-search-box-height, 45px);
+  }
+  button {
+    background: var(--fin-search-box-background, white);
+    height: var(--fin-search-box-height, 45px);
+    border: none;
+    margin: 0;
+    padding: 10px;
+    border-radius: 0;
+  }
+  select {
+    margin-left: 20px;
+    border: none;
+    background-color: var(--fin-search-box-browse-background, white);
+    border-radius: 0;
+    height: var(--fin-search-box-height, 45px);
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    padding: 5px 10px;;
+  }
+</style>
+
+<div>
+  <input 
+    id="input" 
+    type="text"
+    on-keyup="_onKeyUp"
+    placeholder="[[placeholder]]" />
+  <button on-click="_fireSearch">+</button>
+  <select id="select" on-change="_fireBrowse">
+    <option>Browse</option>
+  </select>
+</div>
