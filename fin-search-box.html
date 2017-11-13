@@ -8,10 +8,11 @@
   }
   input {
     flex: 1;
-    padding: 10px;
+    padding: 0 5px;
     background: white;
     border: none;
     height: 45px;
+    outline: none;
     @apply --fin-search-box-input;
   }
   button {
@@ -19,8 +20,9 @@
     height: 45px;
     border: none;
     margin: 0;
-    padding: 10px;
+    padding: 0 10px;
     border-radius: 0;
+    cursor: pointer;
     @apply --fin-search-box-button;
   }
   select {
@@ -46,7 +48,9 @@
     type="text"
     on-keyup="_onKeyUp"
     placeholder="[[placeholder]]" />
-  <button on-click="_fireSearch">+</button>
+  <button on-click="_fireSearch">
+    <slot name="button-content"></slot>
+  </button>
   <select id="select" on-change="_fireBrowse">
     <option>Browse</option>
   </select>
