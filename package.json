@@ -1,11 +1,11 @@
 {
   "name": "@ucd-lib/fin-search-box",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "UCD FIN (fedora-in-docker) search box element",
   "main": "fin-search-box.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server"
+    "demo": "webpack-dev-server"
   },
   "repository": {
     "type": "git",

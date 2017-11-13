@@ -9,27 +9,34 @@
   input {
     flex: 1;
     padding: 10px;
-    background: var(--fin-search-box-background, white);
+    background: white;
     border: none;
-    height: var(--fin-search-box-height, 45px);
+    height: 45px;
+    @apply --fin-search-box-input;
   }
   button {
-    background: var(--fin-search-box-background, white);
-    height: var(--fin-search-box-height, 45px);
+    background: white;
+    height: 45px;
     border: none;
     margin: 0;
     padding: 10px;
     border-radius: 0;
+    @apply --fin-search-box-button;
   }
   select {
     margin-left: 20px;
     border: none;
-    background-color: var(--fin-search-box-browse-background, white);
+    background-color: white;
     border-radius: 0;
-    height: var(--fin-search-box-height, 45px);
+    height: 45px;
     -webkit-appearance: none;
     -webkit-border-radius: 0px;
-    padding: 5px 10px;;
+    padding: 5px 30px 5px 10px;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCA2Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzAwMjg1NTt9PC9zdHlsZT48L2RlZnM+PGc+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjAgMCAxMCAwIDUgNiAwIDAiLz48L2c+PC9zdmc+');
+    @apply --fin-search-box-select;
   }
 </style>
 
