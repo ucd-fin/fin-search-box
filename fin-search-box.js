@@ -21,6 +21,15 @@ export class FinSearchBox extends PolymerElement {
     return template;
   }
 
+  get browseValue() {
+    return this._browseValue || 'Browse';
+  }
+
+  set browseValue(value) {
+    this._browseValue = value;
+    this.$.select.value = value;
+  }
+
   get value() {
     return this.$.input.value;
   }
@@ -66,6 +75,7 @@ export class FinSearchBox extends PolymerElement {
       options.push(`<option value="${key}">${this.browse[key]}</option>`)
     };
     this.$.select.innerHTML = options.join('');
+    this.$.select.value = this.browseValue;
   }
 
 }
