@@ -2,12 +2,13 @@
   :host {
     display: block;
   }
-  div {
+  .root {
     display: flex;
     align-items: center;
   }
   input {
-    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
     padding: 0 5px;
     background: white;
     border: none;
@@ -40,14 +41,21 @@
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCA2Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzAwMjg1NTt9PC9zdHlsZT48L2RlZnM+PGc+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjAgMCAxMCAwIDUgNiAwIDAiLz48L2c+PC9zdmc+');
     @apply --fin-search-box-select;
   }
+  @media(max-width: 600px) {
+    select {
+      margin-left: 10px;
+    }
+  }
 </style>
 
-<div>
-  <input 
-    id="input" 
-    type="text"
-    on-keyup="_onKeyUp"
-    placeholder="[[placeholder]]" />
+<div class="root">
+  <div style="flex:1">
+    <input 
+      id="input" 
+      type="text"
+      on-keyup="_onKeyUp"
+      placeholder="[[placeholder]]" />
+  </div>
   <button on-click="_fireSearch">
     <slot name="button-content"></slot>
   </button>
