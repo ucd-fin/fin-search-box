@@ -1,6 +1,6 @@
 {
   "name": "@ucd-lib/fin-search-box",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "UCD FIN (fedora-in-docker) search box element",
   "main": "fin-search-box.js",
   "scripts": {
