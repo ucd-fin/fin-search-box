@@ -1,6 +1,6 @@
 {
   "name": "@ucd-lib/fin-search-box",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "UCD FIN (fedora-in-docker) search box element",
   "main": "fin-search-box.js",
   "scripts": {
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/ucd-fin/fin-search-box#readme",
   "dependencies": {
-    "@polymer/polymer": "^3.0.0-pre.1"
+    "@polymer/polymer": "^3.0.0"
   },
   "devDependencies": {
     "html-loader": "^0.5.1",
