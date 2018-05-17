@@ -13,7 +13,7 @@ export class FinSearchBox extends PolymerElement {
         type : Object,
         observer : '_onBrowseOptionsChange',
         value : () => {}
-      },
+      }
     }
   }
 
