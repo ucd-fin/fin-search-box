@@ -12,7 +12,7 @@ export class FinSearchBox extends PolymerElement {
       browse : {
         type : Object,
         observer : '_onBrowseOptionsChange',
-        value : () => {}
+        value : () => ({})
       }
     }
   }
@@ -72,12 +72,25 @@ export class FinSearchBox extends PolymerElement {
   }
 
   _onBrowseOptionsChange() {
-    let options = [`<option>Browse</option>`];
+    this.$.select.innerHTML = '';
+
+    var option = document.createElement('option');
+    option.value = 'Browse';
+    option.textContent = 'Browse';
+    option.setAttribute('selected', 'selected');
+    this.$.select.appendChild(option);
+
+    var option = document.createElement('option');
+    option.value = '';
+    option.textContent = 'All Items';
+    this.$.select.appendChild(option);
+
     for( let key in this.browse ) {
-      options.push(`<option value="${key}">${this.browse[key]}</option>`)
+      option = document.createElement('option');
+      option.textContent = this.browse[key];
+      option.value = key;
+      this.$.select.appendChild(option);
     };
-    this.$.select.innerHTML = options.join('');
-    this.$.select.value = this.browseValue;
   }
 
 }
